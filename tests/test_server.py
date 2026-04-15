@@ -32,7 +32,13 @@ def test_main_with_oauth_env(mock_update_views, mock_api, mock_mcp_server):
   mock_update_views.assert_called_once()
   mock_api.get_ads_client.assert_called_once()
   mock_mcp_server.run.assert_called_once_with(
-      transport="streamable-http", show_banner=False
+      transport="streamable-http",
+      show_banner=False,
+      allow_origins=[
+          "https://claude.ai",
+          "https://anthropic.com",
+          "https://api.anthropic.com",
+      ],
   )
   # Verify auth set (hard to verify exact type without exposing it better,
   # but we can check if it was accessed/set if we mock it differently,

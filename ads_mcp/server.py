@@ -52,6 +52,11 @@ def main():
   mcp_server.run(
       transport="streamable-http",
       show_banner=False,
+      allow_origins=[
+          "https://claude.ai",
+          "https://anthropic.com",
+          "https://api.anthropic.com",
+      ],
   )  # Initialize and run the server
 
 
