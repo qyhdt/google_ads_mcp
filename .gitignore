@@ -13,15 +13,13 @@ wheels/
 .vscode/settings.json
 .vscode/launch.json
 
-# Google Ads
-google-ads.yaml
-
 # temp file
 .api-version
 .mcp-server-version
 
 # Env files
 .env
+google-ads.yaml
 
 # Test files
 .coverage
