@@ -52,6 +52,7 @@ def main():
   mcp_server.run(
       transport="streamable-http",
       show_banner=False,
+      host="0.0.0.0",
   )  # Initialize and run the server
 
 
